@@ -4,14 +4,15 @@
         <div class="modal-wrapper" @click="visible=false">
           <div class="modal-container col-md-6" @click.stop>
             <div class="modal-header">
-              <div name="header">
-                Modal
-              </div>
+              <slot name="modal-header"></slot>
+
               <a class="btn-close" @click="visible = false">
               	<i class="fa fa-times-circle"></i>
               </a>
             </div>
-  
+            
+            <slot name="modal-body"></slot>
+
             <div class="modal-footer j-forms">
               <div name="footer">
                 <button class="btn btn-primary">
